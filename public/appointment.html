@@ -106,36 +106,41 @@
         <h2><b>Make an Appointment</h2>
         <p>Fill out the information below and we'll set up your next appointment!</b></p>
         <div class="col-md-7 col-sm-8">
-          <div class="row">
-            <form class="callus">
+           <div class="row">
+            <form class="callus" onSubmit="return false"  id="app_form">
               <div class="row">
+                
+                 <div class="col-md-12">
+                    <div id="result" class="text-center form-group"></div>
+                 </div>
+                
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" type="text" required placeholder="Your Name" required>
+                    <input class="form-control" type="text" id="name" name="name"  placeholder="Your Name" required />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" type="text" required placeholder="Phone No" required>
+                    <input class="form-control" type="text" name="phone" id="phone"  placeholder="Phone No" required />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" type="email" required placeholder="Email" required>
+                    <input class="form-control" type="email"  name="email" id="email" placeholder="Email" required />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" id="datetimepicker" class="form-control" placeholder="Appointment Date">
+                    <input type="date" class="form-control" placeholder="Appointment Date" id="app_date" name="app_date" />
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea placeholder="Message" cols="11" required></textarea>
+                    <textarea placeholder="Message" cols="11" id="message" name="message" required></textarea>
                   </div>
                   <div class="form-group">
                      <div class="btn-submit button3">
-                    <input type="submit" value="Submit Request">
+                    <input type="submit" id="btn_app_submit" value="Submit Request" />
                     </div>
                   </div>
                 </div>
